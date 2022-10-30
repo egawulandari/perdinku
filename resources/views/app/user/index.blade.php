@@ -32,7 +32,7 @@ User - Data Perdin
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td class="font-weight-600">Bandung <i class="fas fa-arrow"></i> Surabaya</td>
+                    <td class="font-weight-600">Bandung <i class="fas fa-light fa-arrow-right"></i> Surabaya</td>
                     <td>28 Sept - 09 Oct, 2022 <small style="color: gray;">(12 hari)</small></td>
                     <td>Keterangan</td>
                     <td><div class="badge badge-success">Approved</div></td>

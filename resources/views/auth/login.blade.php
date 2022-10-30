@@ -1,5 +1,9 @@
 @extends('layouts.auth-master')
 
+@section('title')
+Login
+@endsection
+
 @section('content')
 <div class="card card-primary">
   <div class="card-body">
@@ -17,7 +21,7 @@
         <div class="d-block">
             <label for="password" class="control-label">Password</label>
           <div class="float-right">
-            <a href="" class="text-small">
+            <a href="{{ Route('auth.forget-password') }}" class="text-small">
               Forgot Password?
             </a>
           </div>

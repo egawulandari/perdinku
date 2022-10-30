@@ -24,7 +24,7 @@
         @include('app.partials.topnav')
       </nav>
       <div class="main-sidebar">
-        @include('app.partials.sidebar')
+        @include('app.partials.sidebar-sdm')
       </div>
 
       <!-- Main Content -->

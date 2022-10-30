@@ -1,5 +1,9 @@
 @extends('layouts.auth-master')
 
+@section('title')
+Register
+@endsection
+
 @section('content')
 <div class="card card-primary">
   <div class="card-header"><h4>Register</h4></div>
