@@ -10,6 +10,8 @@ User - Data Perdin
     <h1>PerdinKu</h1>
   </div>
 
+  @include('app.user.modal')
+
   <div class="section-body">
     <div class="row">
       <div class="col-md-12">
@@ -17,7 +19,7 @@ User - Data Perdin
             <div class="card-header">
               <h4 style="color: grey;">Data PerdinKu</h4>
               <div class="card-header-action">
-                <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Perdin</a>
+                <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tambahPerdin"><i class="fas fa-plus"></i> Tambah Perdin</button>
               </div>
             </div>
             <div class="card-body p-0">

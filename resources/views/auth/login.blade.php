@@ -5,15 +5,34 @@ Login
 @endsection
 
 @section('content')
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible show fade" style="width: 100%;">
+  <div class="alert-body">
+    <button class="close" data-dismiss="alert">
+      <span>&times;</span>
+    </button>
+    {{ $message }}
+  </div>
+</div>
+@elseif ($message = Session::get('error'))
+<div class="alert alert-danger alert-dismissible show fade" style="width: 100%;">
+  <div class="alert-body">
+    <button class="close" data-dismiss="alert">
+      <span>&times;</span>
+    </button>
+    {{ $message }}
+  </div>
+</div>
+@endif
 <div class="card card-primary">
   <div class="card-body">
-    <form method="POST" action="">
+    <form method="POST" action="{{ Route('login.post') }}">
         @csrf
       <div class="form-group">
         <label for="email">Email</label>
-        <input aria-describedby="emailHelpBlock" id="email" type="email" class="form-control" name="email" placeholder="Registered email address" tabindex="1" value="{{ old('email') }}" autofocus>
+        <input aria-describedby="emailHelpBlock" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Registered email address" tabindex="1" value="{{ old('email') }}" autofocus>
         <div class="invalid-feedback">
-          
+          {{ $errors->first('email') }}
         </div>
       </div>
 
@@ -28,7 +47,7 @@ Login
         </div>
         <input aria-describedby="passwordHelpBlock" id="password" type="password" placeholder="Your account password" class="form-control{{ $errors->has('password') ? ' is-invalid': '' }}" name="password" tabindex="2">
         <div class="invalid-feedback">
-          
+          {{ $errors->first('password') }}
         </div>
       </div>
 

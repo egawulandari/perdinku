@@ -6,11 +6,11 @@
 </form>
 <ul class="navbar-nav navbar-right">
   <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-    <div class="d-sm-none d-lg-inline-block">Hi, Admin</div></a>
+    <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div></a>
     <div class="dropdown-menu dropdown-menu-right">
-      <div class="dropdown-title">Welcome, Admin</div>
+      <div class="dropdown-title">Welcome, {{ auth()->user()->role }}</div>
       <div class="dropdown-divider"></div>
-      <a href="" class="dropdown-item has-icon text-danger">
+      <a href="{{ Route('logout') }}" class="dropdown-item has-icon text-danger">
         <i class="fas fa-sign-out-alt"></i> Logout
       </a>
     </div>
